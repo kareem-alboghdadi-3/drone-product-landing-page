@@ -1,0 +1,833 @@
+/* =========================================
+    Reset & Base Styles
+========================================= */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: "Exo", sans-serif;
+    font-size: var(--fs-16);
+    font-weight: 400;
+    color: var(--gray-700);
+}
+html{
+    scroll-behavior: smooth;
+}
+::selection{
+    background-color: #8E51FF;
+    color: var(--white);
+}
+button{
+    cursor: pointer;
+}
+.text-center{
+    text-align: center;
+}
+
+/* =========================================
+    CSS Variables (Design System)
+========================================= */
+:root {
+    /* Colors */
+    --white: #ffffff;
+    --violet-50: #f5f3ff;
+    --violet-100: #ede9fe;
+    --violet-400: #a684ff;
+    --violet-500: #8e51ff;
+    --violet-600: #7f22fe;
+    --violet-700: #7008e7;
+
+    --red-100: #ffe2e2;
+    --red-600: #e7000b;
+
+    --orange-500: #ff6900;
+    --orange-600: #f54a00;
+
+    --green-500: #00c951;
+    --green-600: #00a63e;
+
+    --teal-500: #00bba7;
+    --cyan-500: #00b8db;
+
+    --gray-500: #6a7282;
+    --gray-700: #333;
+    --gray-800: #1e2939;
+
+    /* Font Sizes */
+    --fs-12: 12px;
+    --fs-14: 14px;
+    --fs-16: 16px;
+    --fs-18: 18px;
+    --fs-20: 20px;
+    --fs-24: 24px;
+    --fs-36: 36px;
+    --fs-48: 48px;
+    --fs-60: 60px;
+
+    /* Font Weights */
+    --fw-medium: 500;
+    --fw-semibold: 600;
+    --fw-bold: 700;
+
+    /* Line Heights */
+    --lh-16: 16px;
+    --lh-20: 20px;
+    --lh-24: 24px;
+    --lh-26: 26px;
+    --lh-28: 28px;
+    --lh-32: 32px;
+    --lh-33: 33px;
+    --lh-40: 40px;
+    --lh-60: 60px;
+
+    /* Spacing System */
+    --space-4: 4px;
+    --space-5: 5px;
+    --space-8: 8px;
+    --space-10: 10px;
+    --space-12: 12px;
+    --space-16: 16px;
+    --space-20: 20px;
+    --space-24: 24px;
+    --space-32: 32px;
+    --space-40: 40px;
+    --space-48: 48px;
+
+    /* Percent Width Helpers */
+    --percent-78: 78%;
+    --percent-15: 15%;
+    --percent-5: 5%;
+    --percent-1-5: 1.5%;
+    --percent-0-5: 0.5%;
+}
+
+/* =========================================
+   ========== 3. Typography Utilities ==========
+========================================= */
+
+/* Font Sizes */
+.fs-12 { font-size: var(--fs-12); }
+.fs-14 { font-size: var(--fs-14); }
+.fs-18 { font-size: var(--fs-18); }
+.fs-20 { font-size: var(--fs-20); }
+.fs-24 { font-size: var(--fs-24); }
+.fs-36 { font-size: var(--fs-36); }
+.fs-48 { font-size: var(--fs-48); }
+.fs-60 { font-size: var(--fs-60); }
+
+/* Font Weights */
+.font-medium { font-weight: var(--fw-medium); }
+.font-semibold { font-weight: var(--fw-semibold); }
+.font-bold { font-weight: var(--fw-bold); }
+
+/* Line Heights */
+.lh-16 { line-height: var(--lh-16); }
+.lh-20 { line-height: var(--lh-20); }
+.lh-24 { line-height: var(--lh-24); }
+.lh-26 { line-height: var(--lh-26); }
+.lh-28 { line-height: var(--lh-28); }
+.lh-32 { line-height: var(--lh-32); }
+.lh-33 { line-height: var(--lh-33); }
+.lh-40 { line-height: var(--lh-40); }
+.lh-60 { line-height: var(--lh-60); }
+
+/* =========================================
+    Color Utilities
+========================================= */
+
+/* Text Colors */
+.text-white { color: var(--white); }
+.text-violet-500 { color: var(--violet-500); }
+.text-violet-600 { color: var(--violet-600); }
+.text-violet-700 { color: var(--violet-700); }
+.text-red-600 { color: var(--red-600); }
+.text-orange-600 { color: var(--orange-600); }
+.text-green-600 { color: var(--green-600); }
+.text-gray-500{color: var(--gray-500);}
+.text-gray-700{color: var(--gray-700);}
+
+/* Background Colors */
+.bg-violet-50 { background-color: var(--violet-50); }
+.bg-violet-100 { background-color: var(--violet-100); }
+.bg-violet-400 { background-color: var(--violet-400); }
+.bg-violet-500 { background-color: var(--violet-500); }
+.bg-red-100 { background-color: var(--red-100); }
+.bg-teal-500 { background-color: var(--teal-500); }
+.bg-green-500 { background-color: var(--green-500); }
+.bg-cyan-500 { background-color: var(--cyan-500); }
+.bg-orange-500 { background-color: var(--orange-500); }
+.bg-gray-800 { background-color: var(--gray-800); }
+
+/* =========================================
+    Layout Utilities
+========================================= */
+
+.container {
+    width: 90%;
+    margin: auto;
+}
+
+.clear-fix {
+    clear: both;
+}
+
+ul { list-style: none; }
+a { text-decoration: none; }
+
+
+
+/* =========================================
+    Spacing Utilities
+========================================= */
+
+/* Padding */
+.p-5 { padding: var(--space-5); }
+.p-20 { padding: var(--space-20); }
+.py-16 { padding-block: var(--space-16); }
+.px-24 { padding-inline: var(--space-24); }
+
+/* Margin */
+.me-4 { margin-right: var(--space-4); }
+.mt-4 { margin-top: var(--space-4); }
+.me-8 { margin-right: var(--space-8); }
+.mb-8 { margin-bottom: var(--space-8); }
+.me-12 { margin-right: var(--space-12); }
+.mt-10 { margin-top: var(--space-10); }
+.me-16 { margin-right: var(--space-16); }
+.mb-16 { margin-bottom: var(--space-16); }
+.mb-24 { margin-bottom: var(--space-24); }
+.mb-32 { margin-bottom: var(--space-32); }
+.mb-48 { margin-bottom: var(--space-48); }
+
+
+
+/* =========================================
+    Components - Navbar
+========================================= */
+
+nav{
+    border-bottom: 1px solid #ddd6ff;
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    right: 0;
+    top: 0;
+}
+.nav-brand{
+    float: left;
+}
+.nav-brand .logo{
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    vertical-align: middle;
+}
+.nav-brand .logo img{
+    display: inline-block;
+    width: 100%;
+}
+.nav-title{
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.nav-menu{
+    float: right;
+}
+
+.nav-list li{
+    display: inline-block;
+    position: relative;
+}
+.nav-list li.active::before{
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--violet-600);
+}
+.nav-list li::after{
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--violet-600);
+    transition: width 0.3s ease-in-out;
+}
+.nav-list li:hover::after{
+    width: 100%;
+}
+.nav-link{
+    transition: color 0.3s;
+}
+.nav-list li:hover .nav-link{
+    color: var(--violet-600);
+}
+
+/* =========================================
+    Components - Hero Section
+========================================= */
+.hero{
+    padding: 176px 0 96px 0;
+}
+.hero .hero-media{
+    border: 2px solid #E0E2E6;
+    border-radius: 24px;
+    position: relative;
+    width: 45%;
+    float: left;
+}
+.hero-image img{
+    width: 100%;
+    border-radius: 16px;
+}
+.hero .hero-badge{
+    position: absolute;
+    top: 40px;
+    left: 40px;
+    padding: 4px 12px;
+    border-radius: 20px;
+}
+
+.hero-details{
+    float: right;
+    width: 50%;
+}
+.hero-tags .tag{
+    padding: 4px 12px;
+    display: inline-block;
+    border-radius: 20px;
+    font-size: var(--fs-14);
+    line-height: var(--lh-20);
+    font-weight: var(--fw-bold);
+    color: var(--white);
+    background-color: var(--violet-400);
+}
+.hero-title{
+    font-size: var(--fs-48);
+    font-weight: var(--fw-bold);
+    line-height: var(--lh-60);
+}
+.price-current ,
+.price-discount,
+.price-old{
+    display: inline-block;
+    vertical-align: middle;
+}
+.price-old{
+    text-decoration: line-through;
+}
+.price-discount{
+    padding: 4px 12px;
+    border-radius: 20px;
+}
+.hero .btn{
+    padding: 16px 32px;
+    font-size: var(--fs-18);
+    line-height: var(--lh-28);
+    font-weight: var(--fw-bold);
+    border-radius: 30px;
+    width: 100%;
+    transition: transform 0.2s;
+}
+.hero .btn span{
+    vertical-align: middle ;
+}
+.hero .btn img{
+    width: 20px;
+    vertical-align: middle;
+    margin-right: var(--space-12);
+}
+.btn-violet{
+    border: none;
+    background-color: var(--violet-500);
+}
+.btn:hover{
+    transform: scale(1.03);
+}
+.btn-secondary{
+    border: 2px solid #d1d5dc;
+    background-color: transparent;
+}
+
+/* =========================================
+    Components - Comparison Table
+========================================= */
+.comparison{
+padding-block: 80px;
+background-color: #F7F5FF;
+}
+.header-section{
+    text-align: center;
+    margin-bottom: 64px;
+}
+.comparison-table{
+    padding: 32px;
+    border: 2px solid #d1d5dc;
+    border-radius: 24px;
+    background-color: var(--white);
+    overflow: hidden;
+}
+table{
+    width: 100%;
+}
+
+thead th{
+    padding: 24px 16px;
+    font-size: var(--fs-18);
+    line-height: var(--lh-28);
+    border-bottom: 2px solid #DADDE3;
+}
+.comparison-item-name{
+    font-weight: var(--fw-bold);
+    margin-bottom: var(--space-8);
+}
+thead th:first-child{
+    text-align: left;
+    font-weight: var(--fw-semibold);
+}
+.comparison-item-label{
+    font-weight: var(--fw-bold);
+    font-size: var(--fs-14);
+    line-height: var(--lh-20);
+    color: var(--gray-500);
+}
+
+tbody tr:not(:last-child) td{
+    border-bottom: 1px solid #DADDE3;
+}
+
+.comparison-feature img{
+    width: 20px;
+    margin-right: var(--space-8);
+    vertical-align: middle;
+}
+.comparison-feature{
+    margin-inline: auto;
+}
+tbody td{
+    padding: 16px;
+    text-align: center;
+    line-height: var(--lh-24);
+}
+tbody td:first-child{
+    font-weight: var(--fw-medium);
+    text-align: left;
+}
+tbody td span{
+    display: inline-block;
+}
+table .feature-badge{
+    padding: 4px 12px;
+    background-color: var(--violet-500);
+    border-radius: 30px;
+    color: var(--white);
+    font-size: var(--fs-14);
+    line-height: var(--lh-20);
+    font-weight: var(--fw-semibold);
+    width: fit-content;
+}
+table .feature-badge img{
+    margin-right: var(--space-4);
+}
+.feature-unavailable img{
+    width: 20px;
+    vertical-align: middle;
+    margin-right: var(--space-4);
+}
+.feature-unavailable span{
+    vertical-align: middle;
+} 
+tbody tr:last-child td{
+    padding: 24px 16px;
+    font-weight: var(--fw-bold);
+}
+tbody .rating-stars img{
+    width: 20px;
+    margin-right: 4px;
+}
+.table-rounded-top{
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+    background-color: var(--violet-100);
+}
+.table-rounded-bottom{
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px;
+}
+tbody tr td:nth-child(2){
+    background-color: var(--violet-100);
+}
+.winner-card{
+    padding: 16px 32px;
+    background-color: var(--white);
+    border: 1px solid #ebe6e7;
+    border-radius: 16px;
+    width: fit-content;
+    margin-inline: auto;
+}
+.winner-card-icon{
+    display: inline-block;
+}
+.winner-card-icon img{
+    width: 30px;
+    margin-right: var(--space-12);
+    vertical-align: middle;
+}
+.winner-card-content{
+    display: inline-block;
+    vertical-align: middle;
+}
+
+/* =========================================
+    Components - Testimonials
+========================================= */
+
+.testimonials{
+    padding-block: 80px;
+}
+.testimonials-wrapper{
+    position: relative;
+}
+.rating-summary{
+    padding: 32px;
+    width: 30%;
+    border: 2px solid #ebe6e7;
+    border-radius: 24px;
+    position: sticky;
+    top: 80px;
+    float: left;
+}
+.rating-details{
+    margin-bottom: var(--space-32);
+    text-align: center;
+}
+.rating-summary .stars img{
+    width: 25px;
+    margin-right: var(--space-4);
+}
+.rating-item{
+    margin-bottom: var(--space-16);
+}
+.rating-item span{
+    display: inline-block;
+    vertical-align: middle;
+    font-size: var(--fs-14);
+    line-height: var(--lh-20);
+}
+.rating-bar-track{
+    display: inline-block;
+    width: 71%;
+    height: 12px;
+    background-color: #ebe6e7;
+    border-radius: 30px;
+    margin-right: var(--space-12);
+    vertical-align: middle;
+    overflow: hidden;
+}
+.rating-bar-fill{
+    height: 100%;
+    background-color: #f0b100;
+    border-radius: 30px;
+}
+.w-percent-78 { width: var(--percent-78); }
+.w-percent-15 { width: var(--percent-15); }
+.w-percent-5  { width: var(--percent-5); }
+.w-percent-1-5 { width: var(--percent-1-5); }
+.w-percent-0-5 { width: var(--percent-0-5); }
+.ratings-summary{
+    border-top: 1px solid #d1d5dc;
+    margin-top: var(--space-32);
+    padding-top: var(--space-24);
+    text-align: center;
+}
+.rating-left{
+    float: left;
+}
+.rating-right{
+    float: right;
+}
+.rating-value{
+    font-size: var(--fs-24);
+    line-height: var(--lh-32);
+    font-weight: var(--fw-bold);
+}
+.rating-label{
+    font-size: var(--fs-14);
+    line-height: var(--lh-20);
+}
+/*  */
+.testimonials-list{
+    width: 65%;
+    float: right;
+}
+.testimonial{
+    padding: var(--space-32);
+    border: 2px solid #ebe6e7;
+    border-radius: 16px;
+
+}
+.testimonial-user{
+    float: left;
+}
+.testimonial-avatar{
+    display: inline-block;
+}
+.testimonial-avatar img{
+    width: 52px;
+    vertical-align: middle;
+    margin-right: var(--space-16);
+    border: 2px solid #a684ff;
+    border-radius: 50%;
+}
+.testimonial-info{
+    display: inline-block;
+    vertical-align: middle;
+}
+.testimonial-rating img{
+    width: 17px;
+    margin-right: var(--space-4);
+    vertical-align: middle;
+}
+.testimonial-meta{
+    float: right;
+}
+.testimonial-meta span{
+    display: inline-block;
+    padding: 4px 12px;
+    color: #5d0ec0;
+    font-weight: var(--fw-semibold);
+    font-size: var(--fs-12);
+    line-height: var(--lh-16);
+    background-color: var(--violet-100);
+    border-radius: 30px;
+}
+.testimonial-meta p{
+    text-align: right;
+}
+.testimonials-load-more{
+    text-align: center;
+    padding-top: var(--space-32);
+}
+.testimonials-load-more button{
+    padding: 12px 32px;
+    border: 2px solid #8e51ff;
+    border-radius: 30px;
+    font-weight: var(--fw-semibold);
+    line-height: var(--lh-24);
+    color: var(--white);
+    background-color: var(--violet-500);
+    transition: all 0.3s ease;
+
+}
+.testimonials-load-more button:hover{
+    background-color: var(--white);
+    color: var(--violet-600);
+}
+
+/* =========================================
+    Components - Product Accessories
+========================================= */
+
+.product-accessories{
+    padding-block: 80px;
+    background-color: #F7F5FF;
+}
+.card{
+    width: 25%;
+    float: left;
+    padding-right: 20px;
+}
+.card:hover img{
+    transform: scale(1.05);
+}
+.cards .card:nth-last-child(2){
+    padding-right: 0;
+}
+.card-inner{
+    padding: 24px;
+    background-color: var(--white);
+    border: 2px solid #ebe6e7;
+    border-radius: 16px;
+    overflow: hidden;
+}
+.card-image img{
+    width: 100%;
+    height: 192px;
+    object-fit: cover;
+    border-radius: 12px;
+    transition: transform 0.3s ease-in-out;
+}
+.card-image{
+    position: relative;
+    margin-bottom: var(--space-24);
+}
+.card-image span{
+    position: absolute;
+    top: 12px;
+    left: 12px;
+}
+.badge{
+    color: var(--white);
+    font-weight: var(--fw-semibold);
+    font-size: var(--fs-14);
+    line-height: var(--lh-20);
+    padding: 4px 12px;
+    border-radius: 30px;
+}
+
+.card-content h3{
+    font-size: var(--fs-20);
+    line-height: var(--lh-28);
+    font-weight: var(--fw-bold);
+    margin-bottom: var(--space-8);
+}
+.card-footer span{
+    float: left;
+}
+.card-footer button{
+    float: right;
+    padding: 8px 16px;
+    color: var(--white);
+    background-color: var(--violet-500);
+    border-radius: 30px;
+    border: none;
+}
+.accessories-actions{
+    text-align: center;
+    margin-top: 48px;
+}
+.accessories-actions button{
+    padding: 16px 32px;
+    border: 2px solid #7f22fe;
+    border-radius: 30px;
+    line-height: var(--lh-24);
+    font-weight: var(--fw-semibold);
+    color: var(--violet-700);
+    transition: all 0.3s ease;
+}
+.accessories-actions button:hover{
+    border-color: var(--violet-600);
+    background-color: var(--violet-600);
+    color: var(--white);
+}
+/* =========================================
+    Components - Footer
+========================================= */
+.site-footer{
+    color: var(--white);
+    padding: 64px 0 32px;
+    background-color: #101828;
+}
+.icon-footer{
+    width: 40px;
+    height: 40px;
+    background-color: var(--violet-600);
+    border-radius: 8px;
+    margin-right: var(--space-8);
+    text-align: center;
+    line-height: var(--lh-40);
+    display: inline-block;
+}
+.icon-footer img{
+    width: 20px;
+    vertical-align: middle;
+}
+.footer-brand{
+    width: 25%;
+    float: left;
+    margin-right: 35px;
+}
+.footer-brand span{
+    vertical-align: middle;
+}
+.social-icon{
+    border-radius: 8px;
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    text-align: center;
+    line-height: var(--lh-40);
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+.social-icon img{
+    width: 20px;
+    vertical-align: middle;
+}
+.social-icon.facebook:hover{
+    background-color: #1877f2;
+}
+.social-icon.twitter:hover{
+    background-color: #1da1f2;
+}
+.social-icon.instagram:hover{
+    background-color: #e4405f;
+}
+.social-icon.youtube:hover{
+    background-color: red;
+}
+.footer-links{
+    width: 24%;
+    float: left;
+}
+.footer-heading{
+    font-size: var(--fs-18);
+    line-height: var(--lh-28);
+    font-weight: var(--fw-semibold);
+    margin-bottom: var(--space-24);
+}
+.footer-list li{
+    line-height: var(--lh-24);
+    color: #99a1af;
+    cursor: pointer;
+    margin-bottom: var(--space-12);
+    transition: color 0.2s ease;
+}
+.footer-list li:hover{
+    color: var(--white);
+}
+.footer-bottom{
+    border-top: 1px solid #1e2939;
+    padding-top: var(--space-32);
+}
+
+.payment-icon{
+    background-color: var(--white);
+    border-radius: 8px;
+    display: inline-block;
+    padding: 12px;
+    text-align: center;
+}
+.payment-icon.paypal{
+    width: 80px;
+    height: 40px;
+    line-height: 16px;
+}
+.payment-icon.master-card{
+    width: 50px;
+    height: 45px;
+    line-height: 21px;
+}
+.payment-icon.visa{
+    width: 90px;
+    height: 45px;
+    line-height: 21px;
+}
+.payment-icon img{
+    max-width: 100%;
+    vertical-align: middle;
+}
+.footer-copyright{
+    float: left;
+}
+.footer-payments{
+    float: right;
+}
